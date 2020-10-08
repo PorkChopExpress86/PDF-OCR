@@ -1,6 +1,7 @@
 *.pdf
 *.jpg
 *.txt
+*.ipynb
 env-ocr/
 !pdf/.gitkeep
 !jpg/.gitkeep

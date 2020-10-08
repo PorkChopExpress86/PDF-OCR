@@ -1,7 +1,5 @@
 from pdf2image import convert_from_path
 import os
-import platform
-import numpy as np
 import cv2
 from PIL import Image
 import pytesseract
