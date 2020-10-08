@@ -1,0 +1,8 @@
+*.pdf
+*.jpg
+*.txt
+env-ocr/
+!pdf/.gitkeep
+!jpg/.gitkeep
+!output/
+!requirements.txt
