@@ -2,6 +2,9 @@
 *.jpg
 *.txt
 *.ipynb
+.ipynb_checkpoints
+.vscode
+.output
 env-ocr/
 !pdf/.gitkeep
 !jpg/.gitkeep
