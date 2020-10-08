@@ -50,7 +50,6 @@ class PdfToJpg:
                 ocr_config = "-l eng --psm 11 --oem 3 -c preserve_interword_spaces=1"
 
                 ## PDF File Conversion: converts a pdf into a readable (searchable) pdf
-                text_file_name = "/" + name.replace(".jpg", ".txt")
                 hocr_file_name = "/" + name.replace(".jpg", ".pdf")
                 hocr = pytesseract.image_to_pdf_or_hocr(
                     Image.open(os.path.join(root, name)), config=ocr_config
