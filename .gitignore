@@ -2,6 +2,8 @@
 *.jpg
 *.txt
 *.ipynb
+*.docx
+*.xls*
 .ipynb_checkpoints
 .vscode
 .output
