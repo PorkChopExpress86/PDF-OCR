@@ -3,16 +3,18 @@ import os
 import cv2
 from PIL import Image
 import pytesseract
+import asyncio
+from codetiming import Timer
 
 
 class PdfToJpg:
-    def __init__(self, pdf_path, jpg_path, output_path):
+    async def __init__(self, pdf_path, jpg_path, output_path):
 
         self.pdf_path = pdf_path
         self.jpg_path = jpg_path
         self.output_path = output_path
 
-    def convert_pdf_folder_to_jpg_folder(self, fail_list):
+    async def convert_pdf_folder_to_jpg_folder(self, fail_list):
 
         for root, dir_name, file_name in os.walk(self.pdf_path):
             num_of_files = len(os.listdir(root))
@@ -48,7 +50,7 @@ class PdfToJpg:
                         print(f"Could not convert {name}")
                         fail_list.append(name)
 
-    def ocr_jpg_back_to_pdf(self, fail_list):
+    async def ocr_jpg_back_to_pdf(self, fail_list):
 
         for root, dir_name, file_names in os.walk(self.jpg_path):
             num_of_files = len(os.listdir(root))
@@ -120,4 +122,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    q = multiprocessing.Queue()
+    p = multiprocessing.Process(target=main, args=())
+    p.start()
+    print(q.get)
+    p.join()
