@@ -3,6 +3,7 @@
 *.txt
 *.ipynb
 *.docx
+*.msg
 *.xls*
 .ipynb_checkpoints
 .vscode
