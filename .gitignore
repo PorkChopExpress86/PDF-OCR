@@ -7,8 +7,8 @@
 *.xls*
 .ipynb_checkpoints
 .vscode
-.output
-env-ocr/
+/COA's
+/venv
 !pdf/.gitkeep
 !jpg/.gitkeep
 !output/

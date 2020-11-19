@@ -21,6 +21,7 @@ class PdfToJpg:
 
                 output_file_name = name.replace(".pdf", ".jpg")
 
+                # Test if the file exists
                 if os.path.exists(os.path.join(self.jpg_path, output_file_name)):
                     file_count += 1
                     percent_done = round((file_count / num_of_files * 100), 1)
@@ -37,8 +38,7 @@ class PdfToJpg:
                             grayscale=True,
                             jpegopt={
                                 "quality": 100,
-                                "progressive": True,
-                                "optimize": True,
+                                "optimize": True
                             },
                         )
                         file_count += 1

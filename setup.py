@@ -25,6 +25,6 @@ except:
     print("jpg folder already exists...")
 
 try:
-    os.mkdir(".output")
+    os.mkdir("./output")
 except:
     print("output already exists...")
